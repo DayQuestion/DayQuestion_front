@@ -1,13 +1,12 @@
 .answerContainer {
-  flex: 1;
   display: flex;
   flex-direction: row;
   padding: 40px;
   float: right;
+  height: auto;
 }
 
 .aInnerContainer {
-  flex: 1;
   display: flex;
   flex-direction: column;
   align-items: end;
