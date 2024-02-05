@@ -14,9 +14,9 @@ function App() {
       <Route index element={<LoginPage />}></Route>
       <Route path="/signUp" element={<SignUpPage />}></Route>
       <Route path="/myPage" element={<MyPage />}></Route>
-      <Route path="/qna" element={<QnAPage />}></Route>
-      <Route path="/friends" element={<FriendsPage />}></Route>
-      <Route path="/feed" element={<FeedPage />}></Route>
+      <Route path="/dailyPage" element={<QnAPage />}></Route>
+      <Route path="/friendsPage" element={<FriendsPage />}></Route>
+      <Route path="/feedPage" element={<FeedPage />}></Route>
     </Routes>
   );
 }

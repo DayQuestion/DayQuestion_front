@@ -15,7 +15,7 @@ const LoginPage = () => {
           <input type="password" placeholder="password" id="password" />
           <div className={styles.linkBox}>
             <button type="submit">Login</button>
-            <Link to={"/qna"}>게스트</Link>
+            <Link to={"/dailyPage"}>게스트</Link>
             <Link to={"/signUp"}>회원가입</Link>
           </div>
           <p className={styles.social}>Social Login</p>

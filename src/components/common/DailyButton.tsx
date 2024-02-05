@@ -9,7 +9,7 @@ const DailyButton = () => {
     <div>
       <button
         onClick={() => {
-          navigate("/Daily");
+          navigate("/dailyPage");
         }}
       >
         <SlPencil style={{ fontSize: "22px", marginBottom: "6px" }} />
