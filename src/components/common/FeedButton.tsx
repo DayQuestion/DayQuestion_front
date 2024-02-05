@@ -12,7 +12,7 @@ const FeedButton = () => {
           navigate("/FeedPage");
         }}
       >
-        <GoPeople />
+        <GoPeople style={{ fontSize: "22px", marginBottom: "6px" }} />
         Feed
       </button>
     </div>

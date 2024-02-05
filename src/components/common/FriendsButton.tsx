@@ -11,7 +11,7 @@ const FriendsButton = () => {
           navigate("/FeedPage");
         }}
       >
-        <CgHeart />
+        <CgHeart style={{ fontSize: "22px", marginBottom: "6px" }} />
         Friends
       </button>
     </div>

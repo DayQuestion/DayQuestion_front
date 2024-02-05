@@ -12,7 +12,7 @@ const DailyButton = () => {
           navigate("/Daily");
         }}
       >
-        <SlPencil />
+        <SlPencil style={{ fontSize: "22px", marginBottom: "6px" }} />
         Daily
       </button>
     </div>
