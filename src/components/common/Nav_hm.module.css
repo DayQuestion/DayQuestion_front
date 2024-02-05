@@ -1,7 +1,10 @@
 .container {
   flex: 1;
   display: flex;
+  max-height: 120px;
+  width: 100%;
   flex-direction: row;
+  align-items: center;
   justify-content: space-around;
 }
 .dailyContainer :hover {

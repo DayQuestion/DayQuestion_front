@@ -1,0 +1,30 @@
+.userContainer {
+  flex: 1;
+  width: 90%;
+  max-height: 100vh;
+  overflow-y: scroll;
+}
+.innerContainer {
+  display: flex;
+  flex-direction: row;
+  padding: 10px;
+  align-items: center;
+}
+.userImage {
+  width: 60px;
+  height: 60px;
+  padding-left: 10px;
+  padding-right: 10px;
+}
+.userInfo {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+}
+.nickName {
+  font-size: 18px;
+  font-weight: 800;
+}
+.note {
+  font-size: 14px;
+}
