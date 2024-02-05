@@ -1,0 +1,75 @@
+.myPage {
+  display: flex;
+  flex-direction: column;
+  background-color: #fff;
+  border-radius: 30px;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.35);
+  width: 740px;
+  height: auto;
+  max-width: 95%;
+  min-height: 480px;
+  padding: 30px;
+  color: #000;
+}
+
+.myPage h3 {
+  height: 20px;
+}
+
+.userContent {
+  display: flex;
+}
+
+.follow {
+  display: flex;
+  gap: 60px;
+  margin-top: 30px;
+}
+.userBox {
+  display: flex;
+  gap: 20px;
+}
+
+.userImg {
+  width: 240px;
+  height: 240px;
+  background-color: #fff;
+  border-radius: 10px;
+  margin: 20px 0 20px 40px;
+  display: flex;
+  flex-direction: column;
+  position: relative;
+}
+
+.userImg button {
+  width: 100px;
+  position: absolute;
+  bottom: 0;
+  right: -12px;
+  border: none;
+  color: #121212;
+  background-color: transparent;
+}
+
+.userInfo {
+  margin: 20px 0 0 30px;
+}
+
+.userInfo p {
+  font-size: 30px;
+  margin-bottom: 10px;
+}
+
+.userInfo input {
+  width: 200px;
+  height: 40px;
+  border-radius: 8px;
+  background-color: #b4b4b4;
+}
+
+.idBox {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  gap: 10px;
+}

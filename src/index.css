@@ -1,5 +1,17 @@
-body {
+* {
+  margin: 0;
+  padding: 0;
 }
 
-code {
+a {
+  text-decoration: none;
+}
+
+body {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  max-width: 2000px;
+  height: 100vh;
+  overflow: hidden;
 }
