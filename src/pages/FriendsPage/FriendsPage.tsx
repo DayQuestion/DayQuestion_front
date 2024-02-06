@@ -1,12 +1,33 @@
 import React from "react";
 import styles from "./FriendsPage.module.css";
+import { Nav_hm } from "../../components/common/Nav_hm";
+import SearchHm from "../../components/common/Search_hm";
+import QuestionContainer from "../../components/common/QuestionContainer";
+import AnswerContainer from "../../components/common/AnswerContainer";
+import UserContainer from "../../components/common/UserContainer";
+import UserHeader from "../../components/common/UserHeader";
 
-const FriendsPage = () => {
+function FriendsPage() {
   return (
-    <div>
-      <h1>FriendsPage.tsx</h1>
-    </div>
+    <section className={styles.feed}>
+      <div className={styles.container}>
+        <div className={styles.left}>
+          <SearchHm />
+          <UserContainer />
+          <Nav_hm />
+        </div>
+        <div className={styles.right}>
+          <div className={styles.rightHeader}>
+            <UserHeader />
+          </div>
+          <div className={styles.rightContent}>
+            <QuestionContainer />
+            <AnswerContainer />
+            <AnswerContainer />
+          </div>
+        </div>
+      </div>
+    </section>
   );
-};
-
+}
 export default FriendsPage;
