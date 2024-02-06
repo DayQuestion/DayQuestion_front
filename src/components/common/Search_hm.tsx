@@ -6,7 +6,10 @@ import { SlOptions } from "react-icons/sl";
 const Search_hm = () => {
   return (
     <div className={styles.leftHeader}>
-      <input className={styles.leftInput} placeholder="chat.." />
+      <input
+        className={styles.leftInput}
+        placeholder="Users, Followings, Chats, ..."
+      />
       <SlMagnifier className={styles.leftInputIcon} />
       <SlOptions className={styles.leftOptionsIcon} />
     </div>

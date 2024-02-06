@@ -2,35 +2,28 @@
   width: 100vw;
   height: 100vh;
   display: flex;
-  flex-direction: column;
 }
 
 .container {
   display: flex;
-  background: "#ffffff";
 }
 
 .left {
   height: 100vh;
-  padding: 10px;
-  background: transparent;
-  display: flex;
   flex-direction: column;
-  vertical-align: middle;
+  align-items: center;
 }
 
 .right {
   display: flex;
   flex-direction: column;
-  background: transparent;
-  box-shadow: -4px 0px 4px 0px rgb(0, 0, 0, 0.1);
+  box-shadow: -3px 0px 15px 0px rgb(0, 0, 0, 0.1);
 }
 
 .rightHeader {
-  height: 140px;
+  height: 8em;
   width: 100%;
   display: flex;
-  padding-left: 10px;
   align-items: center;
   background: transparent;
   border-bottom: 1px solid #e5e5e5;
