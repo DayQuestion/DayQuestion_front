@@ -1,29 +1,27 @@
 .questionContainer {
   flex: 1;
   display: flex;
-  padding: 10px;
 }
 .qInnerContainer {
   flex: 1;
 }
 .qTimeText {
-  margin-left: 20px;
+  color: #3b3b3b;
 }
 .questionBubble {
   position: relative;
-  padding: 10px;
-  margin-left: 20px;
   height: fit-content;
   width: 50%;
   background: #cceaff;
+  padding: 10px;
   border-radius: 0em 0.6em 0.6em 0.6em;
 }
 .questionimage {
   width: 60px;
   height: 60px;
+  padding-right: 20px;
 }
 .questionText {
-  padding-left: 10px;
   color: "#3B3B3B";
   font-weight: 400;
 }
