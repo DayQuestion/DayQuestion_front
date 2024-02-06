@@ -4,13 +4,13 @@
   display: flex;
   flex-direction: column;
 }
+
 .container {
-  flex: 1;
   display: flex;
   background: "#ffffff";
 }
+
 .left {
-  flex-basis: 20%;
   height: 100vh;
   padding: 10px;
   background: transparent;
@@ -18,13 +18,14 @@
   flex-direction: column;
   vertical-align: middle;
 }
+
 .right {
-  flex-basis: 80%;
   display: flex;
   flex-direction: column;
   background: transparent;
   box-shadow: -4px 0px 4px 0px rgb(0, 0, 0, 0.1);
 }
+
 .rightHeader {
   height: 140px;
   width: 100%;
@@ -34,10 +35,12 @@
   background: transparent;
   border-bottom: 1px solid #e5e5e5;
 }
+
 .leftUsers {
   flex: 1;
   margin-left: 10px;
 }
+
 .leftFooter {
   margin-bottom: 10px;
 }

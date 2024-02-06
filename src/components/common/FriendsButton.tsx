@@ -8,7 +8,7 @@ const FriendsButton = () => {
     <div>
       <button
         onClick={() => {
-          navigate("/FeedPage");
+          navigate("/FriendsPage");
         }}
       >
         <CgHeart style={{ fontSize: "22px", marginBottom: "6px" }} />
