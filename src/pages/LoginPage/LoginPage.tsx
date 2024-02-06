@@ -1,13 +1,15 @@
 import React from "react";
 import styles from "./LoginPage.module.css";
 import { Link } from "react-router-dom";
+import { MdFiberManualRecord } from "react-icons/md";
 
 const LoginPage = () => {
   return (
     <div>
       <div className={styles.container}>
         <div className={styles.header}>
-          <h1> - Day_Question</h1>
+          <MdFiberManualRecord className={styles.recordIcon} />
+          <h1>Day_Question</h1>
         </div>
         <form className={styles.form_container}>
           <h2>login</h2>
