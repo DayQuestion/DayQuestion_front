@@ -14,11 +14,17 @@
 }
 
 .header {
+  display: flex;
+  align-items: center;
   position: absolute;
   top: 0;
   left: 0;
   padding: 40px;
   box-sizing: border-box;
+}
+
+.header h1 {
+  padding-left: 10px;
 }
 
 .form_container {
@@ -31,7 +37,7 @@
   margin-top: 60px;
 }
 
-.container h1,
+.container h2,
 .container span {
   text-align: center;
 }
@@ -73,4 +79,8 @@ a {
 
 .social {
   margin-top: 60px;
+}
+
+.recordIcon {
+  color: #00ff38;
 }

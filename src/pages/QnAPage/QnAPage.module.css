@@ -4,13 +4,15 @@
   display: flex;
   flex-direction: column;
 }
+
 .container {
-  flex: 1;
+  width: 100vw;
   display: flex;
   background: "#ffffff";
 }
+
 .left {
-  flex-basis: 20%;
+  width: 20vw;
   height: 100vh;
   padding: 10px;
   background: transparent;
@@ -18,13 +20,16 @@
   flex-direction: column;
   vertical-align: middle;
 }
+
 .right {
-  flex-basis: 80%;
+  width: 80vw;
+  height: 100vh;
   display: flex;
   flex-direction: column;
   background: transparent;
   box-shadow: -4px 0px 4px 0px rgb(0, 0, 0, 0.1);
 }
+
 .rightHeader {
   height: 140px;
   width: 100%;
@@ -37,7 +42,7 @@
 }
 
 .rightHeader h2 {
-  margin-right: 10px;
+  padding: 0 10px 0 10px;
 }
 
 button {
@@ -48,6 +53,11 @@ button {
   flex: 1;
   margin-left: 10px;
 }
+
 .leftFooter {
   margin-bottom: 10px;
+}
+
+.recordIcon {
+  color: #00ff38;
 }

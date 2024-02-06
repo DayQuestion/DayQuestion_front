@@ -1,11 +1,15 @@
 import React from "react";
 import userProfile from "../../assets/profile.png";
 import styles from "./MyPage.module.css";
+import { MdFiberManualRecord } from "react-icons/md";
 
 const MyPage = () => {
   return (
     <div className={styles.myPage}>
-      <h2> - User Page</h2>
+      <div className={styles.box}>
+        <MdFiberManualRecord className={styles.recordIcon} />
+        <h2>User Page</h2>
+      </div>
       <div className={styles.follow}>
         <span>Answered questions : 0 / 2 (0%)</span>
         <span> Follower : </span>

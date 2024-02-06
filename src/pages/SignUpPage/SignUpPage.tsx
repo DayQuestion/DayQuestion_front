@@ -1,13 +1,15 @@
 import React from "react";
 import { Link } from "react-router-dom";
 import styles from "./SignUpPage.module.css";
+import { MdFiberManualRecord } from "react-icons/md";
 
 const RegisterPage = () => {
   return (
     <div id="form">
       <div className={styles.container}>
         <div className={styles.header}>
-          <h1>- Day_Question</h1>
+          <MdFiberManualRecord className={styles.recordIcon} />
+          <h1>Day_Question</h1>
         </div>
         <form className={styles.form_container}>
           <h2>계정 만들기</h2>

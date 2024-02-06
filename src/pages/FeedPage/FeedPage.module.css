@@ -2,43 +2,42 @@
   width: 100vw;
   height: 100vh;
   display: flex;
+  flex-direction: column;
 }
 .container {
   flex: 1;
   display: flex;
+  background: "#ffffff";
 }
 .left {
-  display: flex;
-  width: 100%;
   flex-basis: 20%;
   height: 100vh;
+  padding: 10px;
+  background: transparent;
+  display: flex;
   flex-direction: column;
-  align-items: center;
+  vertical-align: middle;
 }
 .right {
   flex-basis: 80%;
-  background: transparent;
   display: flex;
   flex-direction: column;
-  box-shadow: -3px 0px 15px 0px rgb(0, 0, 0, 0.1);
+  background: transparent;
+  box-shadow: -4px 0px 4px 0px rgb(0, 0, 0, 0.1);
 }
 .rightHeader {
-  height: 8em;
+  height: 140px;
   width: 100%;
   display: flex;
+  padding-left: 10px;
   align-items: center;
   background: transparent;
   border-bottom: 1px solid #e5e5e5;
-  padding-left: 10px;
-}
-.rightHeaderText {
-  font-size: 24px;
-  font-weight: 800;
-}
-.rightContent {
-  padding: 40px;
 }
 .leftUsers {
   flex: 1;
-  width: 90%;
+  margin-left: 10px;
+}
+.leftFooter {
+  margin-bottom: 10px;
 }

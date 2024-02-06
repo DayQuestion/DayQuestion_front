@@ -1,12 +1,17 @@
 import React from "react";
 import styles from "./Search.module.css";
-import { IoIosSearch } from "react-icons/io";
+import { SlMagnifier } from "react-icons/sl";
+import { SlOptions } from "react-icons/sl";
 
 const Search = () => {
   return (
-    <div className={styles.searchBox}>
-      <input type="text" className={styles.search} />
-      <IoIosSearch className={styles.icon} />
+    <div className={styles.leftHeader}>
+      <input
+        className={styles.leftInput}
+        // placeholder="Users, Followings, Chats, ..."
+      />
+      <SlMagnifier className={styles.leftInputIcon} />
+      {/* <SlOptions className={styles.leftOptionsIcon} /> */}
     </div>
   );
 };

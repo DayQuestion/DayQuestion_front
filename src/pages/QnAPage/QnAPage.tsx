@@ -6,6 +6,7 @@ import QuestionContainer from "../../components/common/QuestionContainer";
 import AnswerContainer from "../../components/common/AnswerContainer";
 import { AiOutlineSetting } from "react-icons/ai";
 import { useNavigate } from "react-router-dom";
+import { MdFiberManualRecord } from "react-icons/md";
 
 const QnAPage = () => {
   const navigate = useNavigate();
@@ -23,7 +24,8 @@ const QnAPage = () => {
         </div>
         <div className={styles.right}>
           <div className={styles.rightHeader}>
-            <h2> - Day_Question</h2>
+            <MdFiberManualRecord className={styles.recordIcon} />
+            <h2>Day_Question</h2>
             <button
               onClick={() => {
                 navigate("/myPage");
