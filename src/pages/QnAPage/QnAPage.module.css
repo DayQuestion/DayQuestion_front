@@ -18,6 +18,7 @@
   background: transparent;
   display: flex;
   flex-direction: column;
+
   vertical-align: middle;
 }
 
@@ -51,7 +52,6 @@ button {
 
 .leftUsers {
   flex: 1;
-  margin-left: 10px;
 }
 
 .leftFooter {

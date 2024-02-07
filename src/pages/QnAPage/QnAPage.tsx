@@ -7,6 +7,9 @@ import AnswerContainer from "../../components/common/AnswerContainer";
 import { AiOutlineSetting } from "react-icons/ai";
 import { useNavigate } from "react-router-dom";
 import { MdFiberManualRecord } from "react-icons/md";
+import DailyCalendar from "../../components/Calendar/DailyCalendar";
+
+import MessageForm from "../../components/MessageForm/MessageForm";
 
 const QnAPage = () => {
   const navigate = useNavigate();
@@ -16,7 +19,7 @@ const QnAPage = () => {
         <div className={styles.left}>
           <Search />
           <div className={styles.leftUsers}>
-            <h1>User</h1>
+            <DailyCalendar />
           </div>
           <div className={styles.leftFooter}>
             <Nav />
@@ -39,6 +42,7 @@ const QnAPage = () => {
           </div>
           <AnswerContainer />
           <AnswerContainer />
+          <MessageForm />
         </div>
       </div>
     </section>
