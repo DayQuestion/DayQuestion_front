@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import styles from "./FeedPage.module.css";
 import { Nav_hm } from "../../components/common/Nav_hm";
 import SearchHm from "../../components/common/Search_hm";
@@ -7,6 +7,8 @@ import AnswerContainer from "../../components/common/AnswerContainer";
 import UserContainer from "../../components/common/UserContainer";
 
 function FeedPage() {
+  const [selectedDate, setSelectedDate] = useState(new Date());
+
   // 현재 날짜를 가져옵니다.
   const today = new Date();
 
@@ -26,7 +28,7 @@ function FeedPage() {
             <text className={styles.rightHeaderText}>{formattedDate} </text>
           </div>
           <div className={styles.rightContent}>
-            <QuestionContainer />
+            <QuestionContainer date={selectedDate} />
             <AnswerContainer />
             <AnswerContainer />
           </div>

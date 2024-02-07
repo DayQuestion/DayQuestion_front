@@ -7,11 +7,22 @@ import moment from "moment";
 type ValuePiece = Date | null;
 type Value = ValuePiece | [ValuePiece, ValuePiece];
 
-const DailyCalendar = () => {
+interface DailyCalendarProps {
+  onDateSelect: (date: Date) => void;
+}
+
+const DailyCalendar: React.FC<DailyCalendarProps> = ({ onDateSelect }) => {
   const [today, setToday] = useState(new Date());
 
-  const onChangeToday = () => {
-    setToday(today);
+  const onChangeToday = (value: Value) => {
+    if (value instanceof Date) {
+      const utcDate = new Date(
+        Date.UTC(value.getFullYear(), value.getMonth(), value.getDate())
+      );
+
+      setToday(utcDate);
+      onDateSelect(utcDate);
+    }
   };
 
   return (

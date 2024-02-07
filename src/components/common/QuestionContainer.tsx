@@ -1,11 +1,23 @@
 import React from "react";
 import logo from "../../assets/images/logo.png";
 import styles from "./QuestionContainer.module.css";
+import { questions } from "../../assets/data/data";
 
-const QuestionContainer = () => {
-  // 오늘의 질문을 생성합니다.
-  const questionText = "내일 무엇을 할 계획인가?";
-  const questionText_en = "What is your ressolution for tomorrow?";
+interface QuestionContainerProps {
+  date: Date;
+}
+
+const QuestionContainer: React.FC<QuestionContainerProps> = ({ date }) => {
+  const formattedDate = date.toISOString().split("T")[0];
+
+  const questionData = questions[formattedDate];
+
+  const questionText = questionData
+    ? questionData.question
+    : "질문이 없습니다.";
+  const questionText_en = questionData
+    ? questionData.question_en
+    : "No question for today.";
 
   return (
     <div className={styles.questionContainer}>
@@ -21,4 +33,8 @@ const QuestionContainer = () => {
     </div>
   );
 };
+
 export default QuestionContainer;
+
+// 캘린더 눌렀을 때 함수 호출 함수에서 백앤드에 데이터를 받아오는 요청 특정 날짜에 해당하는 데이터를 받아오는 요청을 보내야함.
+// <QUeafsdf> {data} </QUeafsdf>

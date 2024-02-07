@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import styles from "./FriendsPage.module.css";
 import { Nav_hm } from "../../components/common/Nav_hm";
 import SearchHm from "../../components/common/Search_hm";
@@ -8,6 +8,8 @@ import UserContainer from "../../components/common/UserContainer";
 import UserHeader from "../../components/common/UserHeader";
 
 function FriendsPage() {
+  const [selectedDate, setSelectedDate] = useState(new Date());
+
   return (
     <section className={styles.feed}>
       <div className={styles.container}>
@@ -21,7 +23,7 @@ function FriendsPage() {
             <UserHeader />
           </div>
           <div className={styles.rightContent}>
-            <QuestionContainer />
+            <QuestionContainer date={selectedDate} />
             <AnswerContainer />
             <AnswerContainer />
           </div>

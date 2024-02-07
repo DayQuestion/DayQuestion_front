@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import styles from "./QnAPage.module.css";
 import Search from "../../components/common/Search";
 import Nav from "../../components/common/Nav";
@@ -12,14 +12,20 @@ import DailyCalendar from "../../components/Calendar/DailyCalendar";
 import MessageForm from "../../components/MessageForm/MessageForm";
 
 const QnAPage = () => {
+  const [selectedDate, setSelectedDate] = useState(new Date());
   const navigate = useNavigate();
+
+  const handleDateChange = (date: Date) => {
+    setSelectedDate(date);
+  };
+
   return (
     <section className={styles.feed}>
       <div className={styles.container}>
         <div className={styles.left}>
           <Search />
           <div className={styles.leftUsers}>
-            <DailyCalendar />
+            <DailyCalendar onDateSelect={handleDateChange} />
           </div>
           <div className={styles.leftFooter}>
             <Nav />
@@ -38,7 +44,7 @@ const QnAPage = () => {
             </button>
           </div>
           <div>
-            <QuestionContainer />
+            <QuestionContainer date={selectedDate} />
           </div>
           <AnswerContainer />
           <AnswerContainer />
@@ -50,3 +56,5 @@ const QnAPage = () => {
 };
 
 export default QnAPage;
+
+// 채팅 보낸 것도 데이터베이스에 저장을하고 데이터를 받아와서 그 데이터를 맵소드 이용해서 뿌려줘라
