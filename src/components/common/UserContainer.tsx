@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import img1 from "../../assets/images/logo.png";
 import style from "./UserContainer.module.css";
 import { MdFiberManualRecord } from "react-icons/md";
+import ModalContainer from "./ModalContainer";
 
 const Users = [
   {
@@ -15,9 +16,10 @@ const Users = [
 const UserContainer = () => {
   const [modal, setModal] = useState(false);
 
-  const showModal = () => {
+  const showModal = (user: object) => {
     setModal(true);
   };
+
   return (
     <div className={style.userContainer}>
       {Users.map((user) => (
@@ -33,6 +35,7 @@ const UserContainer = () => {
             <text className={style.nickName}>{user.nickName}</text>
             <text className={style.note}>{user.note}</text>
           </div>
+          {modal && <ModalContainer {...user} />}
         </div>
       ))}
     </div>

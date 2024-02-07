@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import styles from "./FriendsPage.module.css";
-import SearchHm from "../../components/common/Search_hm";
+import SearchHm from "../../components/common/Search";
 import QuestionContainer from "../../components/common/QuestionContainer";
 import AnswerContainer from "../../components/common/AnswerContainer";
 import UserContainer from "../../components/common/UserContainer";

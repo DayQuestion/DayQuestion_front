@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import styles from "./FeedPage.module.css";
-import SearchHm from "../../components/common/Search_hm";
+import SearchHm from "../../components/common/Search";
 import QuestionContainer from "../../components/common/QuestionContainer";
 import AnswerContainer from "../../components/common/AnswerContainer";
 import UserContainer from "../../components/common/UserContainer";
@@ -8,7 +8,7 @@ import Nav from "../../components/common/Nav";
 
 function FeedPage() {
   const [selectedDate, setSelectedDate] = useState(new Date());
-
+  const [modalIsOpen, setModalIsOpen] = useState(false);
   // 현재 날짜를 가져옵니다.
   const today = new Date();
 
