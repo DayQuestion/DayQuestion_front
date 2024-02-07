@@ -1,11 +1,11 @@
 import React, { useState } from "react";
 import styles from "./FriendsPage.module.css";
-import { Nav_hm } from "../../components/common/Nav_hm";
 import SearchHm from "../../components/common/Search_hm";
 import QuestionContainer from "../../components/common/QuestionContainer";
 import AnswerContainer from "../../components/common/AnswerContainer";
 import UserContainer from "../../components/common/UserContainer";
 import UserHeader from "../../components/common/UserHeader";
+import Nav from "../../components/common/Nav";
 
 function FriendsPage() {
   const [selectedDate, setSelectedDate] = useState(new Date());
@@ -16,7 +16,7 @@ function FriendsPage() {
         <div className={styles.left}>
           <SearchHm />
           <UserContainer />
-          <Nav_hm />
+          <Nav />
         </div>
         <div className={styles.right}>
           <div className={styles.rightHeader}>
