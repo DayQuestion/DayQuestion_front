@@ -75,6 +75,32 @@ a {
   margin-top: 60px;
 }
 
+.socialLogin {
+  font-size: 3rem;
+  display: flex;
+  gap: 30px;
+}
+
+.socialLogin .google,
+.socialLogin .kakao {
+  display: flex;
+  flex-direction: row;
+  width: auto;
+  max-width: 260px;
+  gap: 10px;
+  font-size: 1.25rem;
+}
+
+.socialLogin .google {
+  background-color: #f1f1f1;
+  color: #333;
+}
+
+.socialLogin .kakao {
+  background-color: yellow;
+  color: #333;
+}
+
 .recordIcon {
   color: #00ff38;
 }

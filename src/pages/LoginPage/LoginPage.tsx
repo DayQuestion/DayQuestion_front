@@ -2,6 +2,8 @@ import React from "react";
 import styles from "./LoginPage.module.css";
 import { Link } from "react-router-dom";
 import { MdFiberManualRecord } from "react-icons/md";
+import { FcGoogle } from "react-icons/fc";
+import { RiKakaoTalkFill } from "react-icons/ri";
 
 const LoginPage = () => {
   return (
@@ -21,9 +23,15 @@ const LoginPage = () => {
             <Link to={"/signUp"}>회원가입</Link>
           </div>
           <p className={styles.social}>Social Login</p>
-          <div>
-            <span>구글</span>
-            <span> 카카오</span>
+          <div className={styles.socialLogin}>
+            <button className={styles.google}>
+              <FcGoogle />
+              <span>구글로 로그인</span>
+            </button>
+            <button className={styles.kakao}>
+              <RiKakaoTalkFill />
+              카카오로 로그인
+            </button>
           </div>
         </form>
       </div>
