@@ -1,6 +1,5 @@
 import React, { useState } from "react";
 import styles from "./FeedPage.module.css";
-import { Nav_hm } from "../../components/common/Nav_hm";
 import SearchHm from "../../components/common/Search_hm";
 import QuestionContainer from "../../components/common/QuestionContainer";
 import AnswerContainer from "../../components/common/AnswerContainer";

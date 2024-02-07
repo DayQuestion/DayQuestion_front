@@ -81,3 +81,7 @@ abbr {
 .react-calendar__tile--active:enabled:focus {
   background-color: #0066ff;
 }
+
+.react-calendar__tile--now {
+  border-radius: 50px;
+}
