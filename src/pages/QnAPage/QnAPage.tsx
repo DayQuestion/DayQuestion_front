@@ -43,11 +43,10 @@ const QnAPage = () => {
               <AiOutlineSetting />
             </button>
           </div>
-          <div>
+          <div className={styles.rightContent}>
             <QuestionContainer date={selectedDate} />
+            <AnswerContainer />
           </div>
-          <AnswerContainer />
-          <AnswerContainer />
           <MessageForm />
         </div>
       </div>
