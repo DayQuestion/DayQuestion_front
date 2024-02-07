@@ -1,0 +1,15 @@
+textarea {
+  width: 70vw;
+  height: 120px;
+  border: 0.2rem solid rgb(236, 236, 236);
+  border-radius: 4px;
+  padding: 20px;
+  margin-left: 20px;
+  font-size: 1.25rem;
+}
+
+.textareaWrapper {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}

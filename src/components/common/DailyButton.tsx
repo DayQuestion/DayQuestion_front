@@ -1,13 +1,16 @@
 import React from "react";
-import { useNavigate } from "react-router-dom";
+import { useLocation, useNavigate } from "react-router-dom";
 import { SlPencil } from "react-icons/sl";
 
 const DailyButton = () => {
   const navigate = useNavigate();
+  const location = useLocation();
+  const select = location.pathname === "/dailyPage" ? "select" : "";
 
   return (
     <div>
       <button
+        className={select}
         onClick={() => {
           navigate("/dailyPage");
         }}
