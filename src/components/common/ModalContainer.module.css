@@ -1,0 +1,78 @@
+.overlay {
+  background-color: rgba(0, 0, 0, 0.4);
+  width: 100%;
+  height: 100vh;
+  z-index: 10;
+  position: fixed;
+  top: 0;
+  left: 0;
+}
+.content {
+  width: 40%;
+  height: 40%;
+  z-index: 150;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  border-radius: 10px;
+  box-shadow: 2px 2px 2px rgba(0, 0, 0, 0.25);
+  background-color: white;
+  justify-content: center;
+  overflow: auto;
+}
+
+.header {
+  padding: 10px;
+  margin: 10px;
+}
+.recordIcon {
+  color: #00ff38;
+  padding-right: 10px;
+}
+
+.contents {
+  padding: 10px;
+  margin: 10px;
+  flex: 1;
+  display: flex;
+}
+.rightContent {
+  flex: 1;
+  margin: 20px;
+}
+
+.userImage {
+  padding: 20px;
+  width: 150px;
+  height: 150px;
+}
+
+.userTexts {
+  display: flex;
+  flex: 1;
+  flex-direction: column;
+  text-align: right;
+  padding: 10px;
+  font-size: 1em;
+  gap: 10px;
+}
+
+.nickNameText {
+  font-size: 2em;
+  font-weight: 800;
+}
+
+.button {
+  background-color: #0094ff;
+  border-radius: 4px;
+  width: 100px;
+  height: 40px;
+  color: white;
+}
+
+.noteText {
+  font-size: 1em;
+  font-weight: 300;
+  padding-left: 50px;
+}
