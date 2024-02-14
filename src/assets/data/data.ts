@@ -159,5 +159,8 @@ export const friendsData = [
     id: 4,
     name: "정시온",
     email: "siontext@example.com",
+    image: "ss",
+    nickName: "siontext",
+    note: "sw",
   },
 ];
