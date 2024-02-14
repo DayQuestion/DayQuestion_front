@@ -3,7 +3,12 @@ import userProfile from "../../assets/profile.png";
 import styles from "./MyPage.module.css";
 import { MdFiberManualRecord } from "react-icons/md";
 
-const MyPage = () => {
+interface MyPageProps {
+  toggleTheme: () => void;
+  currentTheme: string;
+}
+
+const MyPage: React.FC<MyPageProps> = ({ toggleTheme, currentTheme }) => {
   return (
     <div className={styles.myPage}>
       <div className={styles.box}>
@@ -52,6 +57,7 @@ const MyPage = () => {
                 다크모드
                 <input
                   type="checkbox"
+                  onClick={toggleTheme}
                   style={{ width: "20px", marginLeft: "10px" }}
                 />
               </div>

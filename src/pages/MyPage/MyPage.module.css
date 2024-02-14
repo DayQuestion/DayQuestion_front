@@ -43,7 +43,7 @@
 .userImg {
   width: 240px;
   height: 240px;
-  background-color: #fff;
+  background-color: var(--background-color);
   border-radius: 10px;
   display: flex;
   gap: 10px;

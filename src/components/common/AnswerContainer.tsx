@@ -1,6 +1,7 @@
 import React from "react";
 import logo from "../../assets/images/logo.png";
 import styles from "./AnswerContainer.module.css";
+import "../../index.css";
 
 const AnswerContainer = () => {
   // 답변을 받아옵니다.
