@@ -10,7 +10,7 @@
   border-radius: 40px;
   padding: 0.4em;
   padding-left: 10px;
-  background-color: var(--input);
+  background-color: var(--input-color);
 }
 
 .leftInputIcon {

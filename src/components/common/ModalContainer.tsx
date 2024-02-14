@@ -2,61 +2,56 @@ import React, { useState } from "react";
 import style from "./ModalContainer.module.css";
 import Modal from "react-modal";
 import { MdFiberManualRecord } from "react-icons/md";
+import FriendData from "../../pages/FriendsPage/FriendData";
+
 type Props = {
   id?: number;
   image?: string;
   nickName?: string;
   note?: string;
-  closeModal?: () => void;
 };
-const ModalContainer = ({ id, image, nickName, note }: Props) => {
-  let subtitle: string = "modal";
-  const [modalIsOpen, setModalIsOpen] = useState(true);
+interface userProps {
+  selectedUser: Props | null;
+  closeModal?: () => void;
+  openModal: boolean;
+}
 
-  function openModal() {
-    setModalIsOpen(true);
-  }
+const ModalContainer = ({ selectedUser, openModal, closeModal }: userProps) => {
+  const [subtitle, setSubtitle] = useState("modal");
 
   function afterOpenModal() {
-    subtitle = "te";
-  }
-
-  function closeModal() {
-    setModalIsOpen(false);
+    setSubtitle("Updated Subtitle After Modal Opens"); // Example update
   }
 
   return (
-    <div>
-      <Modal
-        isOpen={modalIsOpen}
-        onAfterOpen={afterOpenModal}
-        onRequestClose={closeModal}
-        className={style.content}
-        contentLabel="User Modal"
-      >
-        <div className={style.header}>
-          {/* 오늘 글을 올렸을 경우 */}
-          <MdFiberManualRecord className={style.recordIcon} />
-          <text className={style.nickNameText}>{nickName}</text>
-        </div>
-        <div className={style.contents}>
-          <img src={image} className={style.userImage} />
-          <div className={style.rightContent}>
-            <div className={style.userTexts}>
-              <text>Answered questions: 364 / 365 (99%)</text>
-              <text>Follower: 123</text>
-              <text>Following: 123</text>
-            </div>
-            <div>
-              <button className={style.button}>팔로우</button>
-            </div>
+    <Modal
+      isOpen={openModal}
+      onAfterOpen={afterOpenModal}
+      onRequestClose={closeModal}
+      className={style.content}
+      contentLabel="User Modal"
+    >
+      <div className={style.header}>
+        {/* 오늘 글을 올렸을 경우 */}
+        <MdFiberManualRecord className={style.recordIcon} />
+        <text className={style.nickNameText}>{selectedUser?.nickName}</text>
+      </div>
+      <div className={style.contents}>
+        <img
+          src={selectedUser?.image}
+          className={style.userImage}
+          alt={selectedUser?.nickName}
+        />
+        <div className={style.rightContent}>
+          <div className={style.userTexts}>
+            <FriendData userId={selectedUser?.id} />
           </div>
         </div>
-        <div>
-          <text className={style.noteText}>{note}</text>
-        </div>
-      </Modal>
-    </div>
+      </div>
+      <div>
+        <text className={style.noteText}>{selectedUser?.note}</text>
+      </div>
+    </Modal>
   );
 };
 export default ModalContainer;
