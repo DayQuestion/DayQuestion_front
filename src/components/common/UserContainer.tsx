@@ -3,7 +3,7 @@ import img1 from "../../assets/images/logo.png";
 import style from "./UserContainer.module.css";
 import { MdFiberManualRecord } from "react-icons/md";
 import ModalContainer from "./ModalContainer";
-
+import { users } from "../../assets/data/data";
 const Users = [
   {
     id: 1,
@@ -22,7 +22,12 @@ const UserContainer = () => {
 
   return (
     <div className={style.userContainer}>
-      {Users.map((user) => (
+      {/* FlatList - 팔로우한 유저 리스트 */}
+      {/* 이미지 */}
+      {/* 유저 이름 */}
+      {/* 유저 최근 업데이트 일자 */}
+      {/* 최근 업데이트 일자가 오늘일 경우 초록색 표시( 혹은 확인 하지 않은 피드일 경우 초록색 표시) */}
+      {users.map((user) => (
         <div className={style.innerContainer}>
           <MdFiberManualRecord className={style.recordIcon} />
           <img

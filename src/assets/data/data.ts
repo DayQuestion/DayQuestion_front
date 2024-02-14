@@ -126,7 +126,7 @@ export const questions: { [key: string]: QuestionData } = {
   },
 };
 
-export const user = [
+export const users = [
   {
     id: 1,
     name: "김희석",
@@ -151,5 +151,13 @@ export const user = [
     id: 5,
     name: "박현민",
     email: "dev.hmpark@example.com",
+  },
+];
+
+export const friendsData = [
+  {
+    id: 4,
+    name: "정시온",
+    email: "siontext@example.com",
   },
 ];

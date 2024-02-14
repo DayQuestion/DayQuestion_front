@@ -4,9 +4,7 @@ import Search from "../../components/common/Search";
 import Nav from "../../components/common/Nav";
 import QuestionContainer from "../../components/common/QuestionContainer";
 import AnswerContainer from "../../components/common/AnswerContainer";
-import { AiOutlineSetting } from "react-icons/ai";
-import { useNavigate } from "react-router-dom";
-import { MdFiberManualRecord } from "react-icons/md";
+import UserContainer from "../../components/common/UserContainer";
 
 function FriendsPage() {
   const [selectedDate, setSelectedDate] = useState(new Date());
@@ -17,11 +15,7 @@ function FriendsPage() {
         <div className={styles.left}>
           <Search />
           <div className={styles.leftUsers}>
-            {/* TODO: FlatList - 팔로우한 유저 리스트 */}
-            {/* 이미지 */}
-            {/* 유저 이름 */}
-            {/* 유저 최근 업데이트 일자 */}
-            {/* 최근 업데이트 일자가 오늘일 경우 초록색 표시( 혹은 확인 하지 않은 피드일 경우 초록색 표시) */}
+            <UserContainer />
           </div>
           <div className={styles.leftFooter}>
             <Nav />
