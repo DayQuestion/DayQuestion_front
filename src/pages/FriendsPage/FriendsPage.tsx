@@ -1,11 +1,10 @@
 import React, { useState } from "react";
 import styles from "./FriendsPage.module.css";
-import SearchHm from "../../components/common/Search";
+import Search from "../../components/common/Search";
+import Nav from "../../components/common/Nav";
 import QuestionContainer from "../../components/common/QuestionContainer";
 import AnswerContainer from "../../components/common/AnswerContainer";
 import UserContainer from "../../components/common/UserContainer";
-import UserHeader from "../../components/common/UserHeader";
-import Nav from "../../components/common/Nav";
 
 function FriendsPage() {
   const [selectedDate, setSelectedDate] = useState(new Date());
@@ -14,17 +13,33 @@ function FriendsPage() {
     <section className={styles.feed}>
       <div className={styles.container}>
         <div className={styles.left}>
-          <SearchHm />
-          <UserContainer />
-          <Nav />
+          <Search />
+          <div className={styles.leftUsers}>
+            <UserContainer />
+          </div>
+          <div className={styles.leftFooter}>
+            <Nav />
+          </div>
         </div>
         <div className={styles.right}>
           <div className={styles.rightHeader}>
-            <UserHeader />
+            <div className={styles.friendsInfo}>
+              {/* TODO: 선택한 유저 정보 Component */}
+              {/* 이미지 */}
+              {/* 유저이름 */}
+              {/* 유저 한줄 소개 */}
+            </div>
+            <div className={styles.friendsData}>
+              {/* TODO: 선택한 유저 정보 Component */}
+              {/* 답변 수 */}
+              {/* 팔로워 */}
+              {/* 팔로잉 */}
+            </div>
           </div>
           <div className={styles.rightContent}>
+            {/* TODO: 선택한 유저 Content Component */}
+            {/* FlatList- 날짜 / 질문 / 답변 */}
             <QuestionContainer date={selectedDate} />
-            <AnswerContainer />
             <AnswerContainer />
           </div>
         </div>
