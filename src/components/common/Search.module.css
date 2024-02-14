@@ -10,16 +10,16 @@
   border-radius: 40px;
   padding: 0.4em;
   padding-left: 10px;
-  background-color: #e9e9e9;
+  background-color: var(--input);
 }
 
 .leftInputIcon {
-  color: #0094ff;
+  color: var(--icon);
   padding: 0px 0px -1px 0px;
   margin: 0px 0px -5px -30px;
 }
 
 .leftOptionsIcon {
-  color: #0094ff;
+  color: var(--icon);
   margin: 0px 0px -5px 30px;
 }

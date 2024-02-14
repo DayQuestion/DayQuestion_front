@@ -7,7 +7,7 @@
 .container {
   width: 100vw;
   display: flex;
-  background: "#ffffff";
+  background: var(--background-color);
 }
 .left {
   width: 20vw;

@@ -1,5 +1,22 @@
 @import url("https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100;200;300;400;500;600;700;800;900&display=swap");
 
+:root {
+  --background-color: #ffffff;
+  --text-color: #3b3b3b;
+  --input-color: #b4b4b4;
+  --answer: #cceaff;
+  --question: #e5e5e5;
+  --icon: #0094ff;
+}
+
+.dark {
+  --background-color: #14171b;
+  --color: #ffffff;
+  --input-color: #3e4249;
+  --answer: #103049;
+  --question: #2c2e32;
+}
+
 * {
   margin: 0;
   padding: 0;
@@ -19,6 +36,37 @@ body {
   overflow: hidden;
 }
 
-.select {
+.select,
+.dark .select {
   color: #0094ff;
+}
+
+.dark {
+  background-color: var(--background-color);
+  color: var(--color);
+}
+
+.dark button {
+  color: var(--color);
+}
+
+.dark .react-calendar {
+  background-color: var(--background-color);
+}
+
+.dark input {
+  background-color: var(--input-color);
+}
+
+.dark textarea {
+  background-color: var(--input-color);
+  border: none;
+}
+
+.dark .answerBubble {
+  background-color: var(--answer);
+}
+
+.dark .questionBubble {
+  background-color: var(--question);
 }
