@@ -7,7 +7,7 @@
 .container {
   flex: 1;
   display: flex;
-  background: "#ffffff";
+  background: var(--background-color);
 }
 .left {
   flex-basis: 20%;
