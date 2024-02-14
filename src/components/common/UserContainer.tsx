@@ -40,7 +40,11 @@ const UserContainer: React.FC<UserContainerProps> = ({ onSelectUser }) => {
           />
           <div className={style.userInfo}>
             <text className={style.nickName}>{user.nickName}</text>
-            <text className={style.note}>{user.note}</text>
+            {user.todayUpdate ? (
+              <text className={style.note}>오늘</text>
+            ) : (
+              <text className={style.note}>며칠 전</text>
+            )}
           </div>
         </div>
       ))}

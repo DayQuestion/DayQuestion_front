@@ -235,6 +235,24 @@ export const friendsData = [
     follower: 123,
     following: 1,
   },
+  {
+    id: 6,
+    answers: 24,
+    follower: 123,
+    following: 1,
+  },
+  {
+    id: 7,
+    answers: 242,
+    follower: 123,
+    following: 81,
+  },
+  {
+    id: 8,
+    answers: 124,
+    follower: 2123,
+    following: 21,
+  },
 ];
 
 export const friendsFeeds = [
@@ -294,5 +312,62 @@ export const friendsFeeds = [
         answer: "맞아요 그게 저에요22",
       },
     ],
+  },
+  {
+    id: 6,
+    feeds: [
+      {
+        date: "2024-02-15",
+        answer: "맞아요 그게 저에요22",
+      },
+    ],
+  },
+  {
+    id: 7,
+    feeds: [
+      {
+        date: "2024-02-15",
+        answer: "맞아요 그게 저에요2244",
+      },
+    ],
+  },
+  {
+    id: 8,
+    feeds: [
+      {
+        date: "2024-02-15",
+        answer: "맞아요 그게 저에요?",
+      },
+    ],
+  },
+];
+
+export const feedUsers = [
+  {
+    id: 6,
+    name: "김이박",
+    email: "dev.hmpark123123@example.com",
+    image: img1,
+    nickName: "김이박",
+    note: "Long Time No See5123",
+    todayUpdate: true,
+  },
+  {
+    id: 7,
+    name: "박이김",
+    email: "dev.hmpark12sdf3123@example.com",
+    image: img1,
+    nickName: "박이김",
+    note: "Long Time No See5123123",
+    todayUpdate: true,
+  },
+  {
+    id: 8,
+    name: "이박김",
+    email: "dev.hmpasdfark123123@example.com",
+    image: img1,
+    nickName: "이박김",
+    note: "Long Time No See5124123",
+    todayUpdate: true,
   },
 ];
