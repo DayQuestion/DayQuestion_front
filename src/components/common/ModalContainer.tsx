@@ -35,6 +35,7 @@ const ModalContainer = ({ id, image, nickName, note }: Props) => {
         contentLabel="User Modal"
       >
         <div className={style.header}>
+          {/* 오늘 글을 올렸을 경우 */}
           <MdFiberManualRecord className={style.recordIcon} />
           <text className={style.nickNameText}>{nickName}</text>
         </div>

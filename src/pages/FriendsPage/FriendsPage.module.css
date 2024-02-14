@@ -4,44 +4,66 @@
   display: flex;
   flex-direction: column;
 }
+
 .container {
-  flex: 1;
+  width: 100vw;
   display: flex;
+  background: "#ffffff";
 }
+
 .left {
-  display: flex;
-  flex: 1;
-  width: 100%;
+  width: 20vw;
   height: 100vh;
-  flex-direction: column;
-  align-items: center;
-}
-.right {
-  flex-basis: 80%;
+  padding: 10px;
   background: transparent;
   display: flex;
   flex-direction: column;
-  box-shadow: -3px 0px 15px 0px rgb(0, 0, 0, 0.1);
+  vertical-align: middle;
 }
+
+.right {
+  width: 80vw;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  background: transparent;
+  justify-content: space-between;
+  box-shadow: -4px 0px 4px 0px rgb(0, 0, 0, 0.1);
+}
+
 .rightHeader {
-  height: 8em;
+  height: 140px;
   width: 100%;
   display: flex;
+  padding-left: 30px;
   align-items: center;
   background: transparent;
   border-bottom: 1px solid #e5e5e5;
-  padding-left: 10px;
-}
-.rightHeaderText {
   font-size: 24px;
-  font-weight: 800;
 }
+
+.rightHeader h2 {
+  padding: 0 10px 0 10px;
+}
+
 .rightContent {
-  padding: 40px;
   flex: 1;
+  display: flex;
   flex-direction: column;
 }
+
+button {
+  font-size: 20px;
+}
+
 .leftUsers {
   flex: 1;
-  width: 90%;
+}
+
+.leftFooter {
+  margin-bottom: 10px;
+}
+
+.recordIcon {
+  color: #00ff38;
 }
