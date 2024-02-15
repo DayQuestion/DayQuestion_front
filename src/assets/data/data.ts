@@ -1,3 +1,5 @@
+import img1 from "../../assets/images/logo.png";
+
 interface QuestionData {
   question: string;
   question_en: string;
@@ -127,7 +129,6 @@ export const questions: { [key: string]: QuestionData } = {
 };
 
 export const users = [
-export const users = [
   {
     id: 1,
     name: "김희석",
@@ -155,13 +156,218 @@ export const users = [
   },
 ];
 
-export const friendsData = [
+export const friendsInfo = [
+  {
+    id: 1,
+    name: "김희석",
+    email: "ooixn@example.com",
+    image: img1,
+    nickName: "김희석",
+    note: "Long Time No See",
+    todayUpdate: true,
+  },
+  {
+    id: 2,
+    name: "김예지",
+    email: "kimpiczza@example.com",
+    image: img1,
+    nickName: "김예지",
+    note: "Long Time No See2",
+    todayUpdate: true,
+  },
+  {
+    id: 3,
+    name: "김민희",
+    email: "minnie5382@example.com",
+    image: img1,
+    nickName: "김민희",
+    note: "Long Time No See3",
+    todayUpdate: false,
+  },
   {
     id: 4,
     name: "정시온",
     email: "siontext@example.com",
-    image: "ss",
-    nickName: "siontext",
-    note: "sw",
+    image: img1,
+    nickName: "정시온",
+    note: "Long Time No See4",
+    todayUpdate: false,
+  },
+  {
+    id: 5,
+    name: "박현민",
+    email: "dev.hmpark@example.com",
+    image: img1,
+    nickName: "박현민",
+    note: "Long Time No See5",
+    todayUpdate: false,
+  },
+];
+
+export const friendsData = [
+  {
+    id: 1,
+    answers: 24,
+    follower: 123,
+    following: 124,
+  },
+  {
+    id: 2,
+    answers: 1,
+    follower: 1,
+    following: 1,
+  },
+  {
+    id: 3,
+    answers: 24,
+    follower: 12,
+    following: 124,
+  },
+  {
+    id: 4,
+    answers: 24,
+    follower: 3,
+    following: 14,
+  },
+  {
+    id: 5,
+    answers: 24,
+    follower: 123,
+    following: 1,
+  },
+  {
+    id: 6,
+    answers: 24,
+    follower: 123,
+    following: 1,
+  },
+  {
+    id: 7,
+    answers: 242,
+    follower: 123,
+    following: 81,
+  },
+  {
+    id: 8,
+    answers: 124,
+    follower: 2123,
+    following: 21,
+  },
+];
+
+export const friendsFeeds = [
+  {
+    id: 1,
+    feeds: [
+      {
+        date: "2024-02-15",
+        answer: "맞아요 그게 저에요",
+      },
+      {
+        date: "2024-02-14",
+        answer: "맞습니다",
+      },
+      {
+        date: "2024-02-13",
+        answer: "맞습니다22",
+      },
+    ],
+  },
+  {
+    id: 2,
+    feeds: [
+      {
+        date: "2024-02-15",
+        answer: "맞아요 그게 저에요22",
+      },
+      {
+        date: "2024-02-13",
+        answer: "맞습니다22",
+      },
+    ],
+  },
+  {
+    id: 3,
+    feeds: [
+      {
+        date: "2024-02-03",
+        answer: "맞습니다22",
+      },
+    ],
+  },
+  {
+    id: 4,
+    feeds: [
+      {
+        date: "2024-02-02",
+        answer: "맞아요 그게 저에요22",
+      },
+    ],
+  },
+  {
+    id: 5,
+    feeds: [
+      {
+        date: "2024-02-01",
+        answer: "맞아요 그게 저에요22",
+      },
+    ],
+  },
+  {
+    id: 6,
+    feeds: [
+      {
+        date: "2024-02-15",
+        answer: "맞아요 그게 저에요22",
+      },
+    ],
+  },
+  {
+    id: 7,
+    feeds: [
+      {
+        date: "2024-02-15",
+        answer: "맞아요 그게 저에요2244",
+      },
+    ],
+  },
+  {
+    id: 8,
+    feeds: [
+      {
+        date: "2024-02-15",
+        answer: "맞아요 그게 저에요?",
+      },
+    ],
+  },
+];
+
+export const feedUsers = [
+  {
+    id: 6,
+    name: "김이박",
+    email: "dev.hmpark123123@example.com",
+    image: img1,
+    nickName: "김이박",
+    note: "Long Time No See5123",
+    todayUpdate: true,
+  },
+  {
+    id: 7,
+    name: "박이김",
+    email: "dev.hmpark12sdf3123@example.com",
+    image: img1,
+    nickName: "박이김",
+    note: "Long Time No See5123123",
+    todayUpdate: true,
+  },
+  {
+    id: 8,
+    name: "이박김",
+    email: "dev.hmpasdfark123123@example.com",
+    image: img1,
+    nickName: "이박김",
+    note: "Long Time No See5124123",
+    todayUpdate: true,
   },
 ];

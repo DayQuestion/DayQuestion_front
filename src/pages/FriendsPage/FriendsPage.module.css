@@ -44,11 +44,11 @@
 }
 .rightHeader {
   height: 140px;
-  width: 100%;
   display: flex;
   padding-left: 30px;
-  padding-left: 30px;
+  padding-right: 30px;
   align-items: center;
+  justify-content: space-between;
   background: transparent;
   border-bottom: 1px solid #e5e5e5;
   font-size: 24px;
@@ -61,8 +61,7 @@
 }
 
 .friendsInfo {
-  background-color: red;
+  flex: 1;
 }
 .friendsData {
-  background-color: blue;
 }

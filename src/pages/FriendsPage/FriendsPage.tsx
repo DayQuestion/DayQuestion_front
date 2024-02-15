@@ -2,20 +2,44 @@ import React, { useState } from "react";
 import styles from "./FriendsPage.module.css";
 import Search from "../../components/common/Search";
 import Nav from "../../components/common/Nav";
-import QuestionContainer from "../../components/common/QuestionContainer";
-import AnswerContainer from "../../components/common/AnswerContainer";
 import UserContainer from "../../components/common/UserContainer";
+import FriendInfo from "./FriendInfo";
+import FriendData from "./FriendData";
+import FriendFeed from "./FriendFeed";
+
+import ModalContainer from "../../components/common/ModalContainer";
+interface User {
+  id: number;
+  name: string;
+  email: string;
+  image: string;
+  nickName: string;
+  note: string;
+  todayUpdate: boolean;
+}
 
 function FriendsPage() {
-  const [selectedDate, setSelectedDate] = useState(new Date());
+  // 선택된 사용자 정보를 저장할 상태
+  const [selectedUser, setSelectedUser] = useState<User | null>(null);
 
+  // 모듈 상태 저장
+  const [isOpenModal, setIsOpenModal] = useState(false);
+
+  // UserContainer에서 호출할 함수: 선택된 사용자 정보를 업데이트
+  const handleSelectUser = (user: User) => {
+    setSelectedUser(user);
+  };
+
+  const handleOpenModal = () => {
+    setIsOpenModal(true);
+  };
   return (
     <section className={styles.feed}>
       <div className={styles.container}>
         <div className={styles.left}>
           <Search />
           <div className={styles.leftUsers}>
-            <UserContainer />
+            <UserContainer onSelectUser={handleSelectUser} />
           </div>
           <div className={styles.leftFooter}>
             <Nav />
@@ -23,24 +47,20 @@ function FriendsPage() {
         </div>
         <div className={styles.right}>
           <div className={styles.rightHeader}>
-            <div className={styles.friendsInfo}>
-              {/* TODO: 선택한 유저 정보 Component */}
-              {/* 이미지 */}
-              {/* 유저이름 */}
-              {/* 유저 한줄 소개 */}
+            <ModalContainer
+              selectedUser={selectedUser}
+              openModal={isOpenModal}
+              closeModal={() => setIsOpenModal(false)}
+            />
+            <div className={styles.friendsInfo} onClick={handleOpenModal}>
+              <FriendInfo friendInfo={selectedUser} />
             </div>
             <div className={styles.friendsData}>
-              {/* TODO: 선택한 유저 정보 Component */}
-              {/* 답변 수 */}
-              {/* 팔로워 */}
-              {/* 팔로잉 */}
+              <FriendData userId={selectedUser?.id} />
             </div>
           </div>
           <div className={styles.rightContent}>
-            {/* TODO: 선택한 유저 Content Component */}
-            {/* FlatList- 날짜 / 질문 / 답변 */}
-            <QuestionContainer date={selectedDate} />
-            <AnswerContainer />
+            <FriendFeed userId={selectedUser?.id} />
           </div>
         </div>
       </div>
