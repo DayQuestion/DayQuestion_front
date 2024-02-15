@@ -1,7 +1,7 @@
 .myPage {
   display: flex;
   flex-direction: column;
-  background-color: #fff;
+  background-color: var(--background-color);
   border-radius: 30px;
   box-shadow: 0 5px 15px rgba(0, 0, 0, 0.35);
   width: 740px;
@@ -9,7 +9,7 @@
   max-width: 95%;
   min-height: 480px;
   padding: 30px;
-  color: #000;
+  color: var(--color);
 }
 
 .myPage h3 {
@@ -43,7 +43,7 @@
 .userImg {
   width: 240px;
   height: 240px;
-  background-color: var(--background-color);
+  background-color: transparent;
   border-radius: 10px;
   display: flex;
   gap: 10px;
