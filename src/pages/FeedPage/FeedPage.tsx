@@ -93,7 +93,9 @@ function FeedPage() {
 
             <ul>
               {selectedAnswers.length > 0 ? (
-                selectedAnswers.map((answer, index) => <AnswerContainer />)
+                selectedAnswers.map((answer, index) => (
+                  <AnswerContainer date={new Date()} />
+                ))
               ) : (
                 <li>No answers for this date</li>
               )}

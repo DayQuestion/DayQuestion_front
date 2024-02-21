@@ -45,7 +45,7 @@ const QnAPage = () => {
           </div>
           <div className={styles.rightContent}>
             <QuestionContainer date={selectedDate} />
-            <AnswerContainer />
+            <AnswerContainer date={selectedDate} />
           </div>
           <MessageForm />
         </div>
@@ -55,5 +55,3 @@ const QnAPage = () => {
 };
 
 export default QnAPage;
-
-// 채팅 보낸 것도 데이터베이스에 저장을하고 데이터를 받아와서 그 데이터를 맵소드 이용해서 뿌려줘라
