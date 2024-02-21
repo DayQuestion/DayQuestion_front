@@ -21,7 +21,7 @@ const FriendFeed: React.FC<FriendFeedProps> = ({ userId }) => {
         <div key={index} className={styles.innerContainer}>
           <text>{friendFeed.date}</text>
           <QuestionContainer date={new Date(friendFeed.date)} />
-          <AnswerContainer />
+          <AnswerContainer date={new Date()} />
         </div>
       ))}
     </div>
