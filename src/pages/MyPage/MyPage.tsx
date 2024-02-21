@@ -2,18 +2,31 @@ import React from "react";
 import userProfile from "../../assets/profile.png";
 import styles from "./MyPage.module.css";
 import { MdFiberManualRecord } from "react-icons/md";
-
+import { IoMdClose } from "react-icons/io";
+import { useNavigate } from "react-router-dom";
 interface MyPageProps {
   toggleTheme: () => void;
   currentTheme: string;
 }
 
 const MyPage: React.FC<MyPageProps> = ({ toggleTheme, currentTheme }) => {
+  const navigate = useNavigate();
   return (
     <div className={styles.myPage}>
       <div className={styles.box}>
-        <MdFiberManualRecord className={styles.recordIcon} />
-        <h2>User Page</h2>
+        <div className={styles.header}>
+          <MdFiberManualRecord className={styles.recordIcon} />
+          <h2>User Page</h2>
+        </div>
+        <div>
+          <button
+            onClick={() => {
+              navigate(-1);
+            }}
+          >
+            <IoMdClose size={40} />
+          </button>
+        </div>
       </div>
       <div className={styles.follow}>
         <span>Answered questions : 0 / 2 (0%)</span>
