@@ -32,7 +32,7 @@ const DailyCalendar: React.FC<DailyCalendarProps> = ({ onDateSelect }) => {
         onChange={onChangeToday}
         formatDay={(locale, date) => moment(date).format("D")}
         value={today}
-        calendarType="US"
+        calendarType="gregory"
         next2Label={null}
         prev2Label={null}
         showNeighboringMonth={false}

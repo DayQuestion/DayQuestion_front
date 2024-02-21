@@ -1,23 +1,57 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import logo from "../../assets/images/logo.png";
+import axios from "axios";
 import styles from "./AnswerContainer.module.css";
-import "../../index.css";
 
-const AnswerContainer = () => {
-  // 답변을 받아옵니다.
-  const answerText =
-    "Est, eget est quis ornare vulputate placerat. Odio nunc vitae, vel scelerisque tortor vitae egestas. Donec lobortis mattis pellentesque nisl nibh eu. ";
+interface AnswerContainerProps {
+  date: Date;
+}
+
+interface Post {
+  userId: number;
+  id: number;
+  title: string;
+  body: string;
+}
+
+const AnswerContainer: React.FC<AnswerContainerProps> = ({ date }) => {
+  const [post, setPost] = useState<Post | null>(null);
+
+  async function fetchPost(date: Date) {
+    const postId = date.getDate();
+
+    try {
+      const response = await axios.get(
+        `https://jsonplaceholder.typicode.com/posts/${postId}`
+      );
+      setPost(response.data);
+    } catch (error) {
+      console.error("Fetch error:", error);
+      setPost(null);
+    }
+  }
+
+  useEffect(() => {
+    fetchPost(date);
+  }, [date]);
 
   return (
     <div className={styles.answerContainer}>
       <div className={styles.aInnerContainer}>
         <div className={styles.aTimeText}>05:19</div>
         <div className={styles.answerBubble}>
-          <text className={styles.answerText}>{answerText}</text>
+          {post ? (
+            <p key={post.id} className={styles.answerText}>
+              {post.body}
+            </p>
+          ) : (
+            <p>답변이 아직 작성되지 않았습니다.</p>
+          )}
         </div>
       </div>
-      <img src={logo} alt="User " className={styles.answerImage} />
+      <img src={logo} alt="User" className={styles.answerImage} />
     </div>
   );
 };
+
 export default AnswerContainer;

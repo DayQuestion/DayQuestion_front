@@ -8,7 +8,7 @@
   width: 600px;
   height: 700px;
   padding: 20px;
-  color: #000;
+  color: var(--text-color);
   border-radius: 10px;
   position: relative;
 }
@@ -60,7 +60,7 @@
 }
 
 .container button,
-a {
+.container a {
   background-color: #1a1a1a;
   color: #fff;
   padding: 12px 50px;
