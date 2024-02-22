@@ -18,6 +18,11 @@ interface userProps {
 
 const ModalContainer = ({ selectedUser, openModal, closeModal }: userProps) => {
   const [subtitle, setSubtitle] = useState("modal");
+  const [isFollowing, setIsFollowing] = useState(false);
+
+  const toggleFollow = () => {
+    setIsFollowing(!isFollowing);
+  };
 
   function afterOpenModal() {
     setSubtitle("Updated Subtitle After Modal Opens"); // Example update
@@ -45,6 +50,11 @@ const ModalContainer = ({ selectedUser, openModal, closeModal }: userProps) => {
         <div className={style.rightContent}>
           <div className={style.userTexts}>
             <FriendData userId={selectedUser?.id} />
+            <div className={isFollowing ? style.following_un : style.following}>
+              <button onClick={toggleFollow}>
+                {isFollowing ? "팔로잉" : "팔로우"}
+              </button>
+            </div>
           </div>
         </div>
       </div>
