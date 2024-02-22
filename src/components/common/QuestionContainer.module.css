@@ -8,10 +8,6 @@
   flex: 1;
 }
 
-.qTimeText {
-  color: var(--color);
-}
-
 .questionBubble {
   position: relative;
   height: fit-content;

@@ -9,7 +9,7 @@
   max-width: 95%;
   min-height: 480px;
   padding: 30px;
-  color: var(--color);
+  color: var(--text-color);
 }
 
 .myPage h3 {

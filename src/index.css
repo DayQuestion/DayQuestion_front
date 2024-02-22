@@ -47,11 +47,11 @@ body {
 
 .dark {
   background-color: var(--background-color);
-  color: var(--color);
+  color: var(--text-color);
 }
 
 .dark button {
-  color: var(--color);
+  color: var(--text-color);
 }
 
 .dark .react-calendar {

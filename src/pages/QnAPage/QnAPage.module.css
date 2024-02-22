@@ -18,6 +18,8 @@
   background: transparent;
   display: flex;
   flex-direction: column;
+  justify-content: center;
+  text-align: center;
   vertical-align: middle;
 }
 
