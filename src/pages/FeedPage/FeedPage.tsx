@@ -6,10 +6,9 @@ import AnswerContainer from "../../components/common/AnswerContainer";
 import Nav from "../../components/common/Nav";
 import { MdArrowBackIos } from "react-icons/md";
 import { MdArrowForwardIos } from "react-icons/md";
-
 import { friendsFeeds } from "../../assets/data/data";
-import UserContainer from "../../components/common/UserContainer";
 import FeedUserContainer from "./FeedUserContainer";
+import ModalContainer from "../../components/common/ModalContainer";
 
 interface User {
   id: number;
@@ -23,7 +22,7 @@ interface User {
 
 function FeedPage() {
   const [selectedDate, setSelectedDate] = useState(new Date());
-  const [modalIsOpen, setModalIsOpen] = useState(false);
+  const [isOpenModal, setIsOpenModal] = useState(false);
   const [selectedUser, setSelectedUser] = useState<User | null>(null);
 
   // 날짜 포멧팅
@@ -57,13 +56,15 @@ function FeedPage() {
   const handleSelectUser = (user: User) => {
     setSelectedUser(user);
   };
-
+  const handleOpenModal = () => {
+    setIsOpenModal(true);
+  };
   return (
     <section className={styles.feed}>
       <div className={styles.container}>
         <div className={styles.left}>
           <Search />
-          <div className={styles.leftUsers}>
+          <div className={styles.leftUsers} onClick={handleOpenModal}>
             {/* TODO: FlatList - 추천 유저 리스트 */}
             {/* 순번 */}
             {/* 이미지 */}
@@ -77,6 +78,11 @@ function FeedPage() {
         </div>
         <div className={styles.right}>
           <div className={styles.rightHeader}>
+            <ModalContainer
+              selectedUser={selectedUser}
+              openModal={isOpenModal}
+              closeModal={() => setIsOpenModal(false)}
+            />
             <button type="button" onClick={prevDate}>
               <MdArrowBackIos />
             </button>

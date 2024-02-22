@@ -9,7 +9,6 @@
   width: 100vw;
   display: flex;
   background: "#ffffff";
-  background: "#ffffff";
 }
 .left {
   width: 20vw;
@@ -55,7 +54,6 @@
 }
 .rightContent {
   flex: 1;
-  display: flex;
   display: flex;
   flex-direction: column;
 }

@@ -53,4 +53,13 @@
   flex: 1;
   display: flex;
   flex-direction: column;
+  max-height: 80vh;
+  overflow-y: auto;
+  scrollbar-width: 0px;
+}
+
+.rightContent ul li {
+  text-align: right;
+  padding-bottom: 10px;
+  padding-right: 10px;
 }
