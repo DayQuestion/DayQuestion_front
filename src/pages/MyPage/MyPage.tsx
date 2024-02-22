@@ -71,6 +71,7 @@ const MyPage: React.FC<MyPageProps> = ({ toggleTheme, currentTheme }) => {
                 <input
                   type="checkbox"
                   onClick={toggleTheme}
+                  checked={currentTheme === "dark"}
                   style={{ width: "20px", marginLeft: "10px" }}
                 />
               </div>
