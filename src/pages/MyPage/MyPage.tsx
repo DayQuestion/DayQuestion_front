@@ -78,6 +78,15 @@ const MyPage: React.FC<MyPageProps> = ({ toggleTheme, currentTheme }) => {
                 <input type="submit" value="저장" />
               </div>
             </div>
+            <div className={styles.withdrawal}>
+              <button
+                onClick={() => {
+                  navigate(-1);
+                }}
+              >
+                회원 탈퇴
+              </button>
+            </div>
           </div>
         </div>
       </div>
