@@ -98,3 +98,9 @@
   flex-direction: row;
   align-items: center;
 }
+
+.withdrawal button {
+  font-size: small;
+  padding-top: 10px;
+  color: #999999;
+}
