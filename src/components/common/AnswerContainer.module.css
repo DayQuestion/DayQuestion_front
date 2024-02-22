@@ -13,11 +13,6 @@
   align-items: end;
 }
 
-.aTimeText {
-  margin-right: 20px;
-  float: right;
-}
-
 .answerBubble {
   position: relative;
   float: right;

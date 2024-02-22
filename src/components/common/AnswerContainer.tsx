@@ -38,7 +38,6 @@ const AnswerContainer: React.FC<AnswerContainerProps> = ({ date }) => {
   return (
     <div className={styles.answerContainer}>
       <div className={styles.aInnerContainer}>
-        <div className={styles.aTimeText}>05:19</div>
         <div className={styles.answerBubble}>
           {post ? (
             <p key={post.id} className={styles.answerText}>

@@ -23,7 +23,6 @@ const QuestionContainer: React.FC<QuestionContainerProps> = ({ date }) => {
     <div className={styles.questionContainer}>
       <img src={logo} alt="User " className={styles.questionimage} />
       <div className={styles.qInnerContainer}>
-        <div className={styles.qTimeText}>05:11</div>
         <div className={styles.questionBubble}>
           <text className={styles.questionText}>{questionText}</text>
           <br />
@@ -35,6 +34,3 @@ const QuestionContainer: React.FC<QuestionContainerProps> = ({ date }) => {
 };
 
 export default QuestionContainer;
-
-// 캘린더 눌렀을 때 함수 호출 함수에서 백앤드에 데이터를 받아오는 요청 특정 날짜에 해당하는 데이터를 받아오는 요청을 보내야함.
-// <QUeafsdf> {data} </QUeafsdf>
